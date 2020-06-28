@@ -19,3 +19,20 @@ class Bst:
                 self.right.Bst(value)
             else:
                 self.right.insert(value)
+
+    def contains(self, target):
+        if target == self.value:
+            return True
+        elif target > self.value:
+            if self.right != None:
+                return self.right.contains(target)
+            else:
+                return False
+
+        elif target < self.value:
+            if self.left != None:
+                return self.left.contains(target)
+            else:
+                return False
+
+    
