@@ -35,4 +35,16 @@ class Bst:
             else:
                 return False
 
-    
+    def get_max(self):
+        if self.right != None:
+            return self.right.get_max()
+        else:
+            return self.value
+
+
+    def for_each(self, fn):
+        fn(self.value)
+        if self.right:
+            self.right.for_each(fn)
+        if self.left:
+            self.left.for_each(fn)
