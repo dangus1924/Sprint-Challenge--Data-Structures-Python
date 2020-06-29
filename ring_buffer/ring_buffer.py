@@ -1,6 +1,10 @@
+from Linked_list import DoublyLinkedList
+
 class RingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.current = None
+        self.storage = DoublyLinkedList()
 
     def append(self, item):
         pass
